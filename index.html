@@ -1171,6 +1171,54 @@
         </footer>
     </main>
 
+    <!-- Chatbot Widget -->
+    <div id="chatbot-toggle" class="chatbot-toggle" title="Hỏi AI về lý thuyết Java">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            <circle cx="9" cy="10" r="1" fill="currentColor"></circle>
+            <circle cx="15" cy="10" r="1" fill="currentColor"></circle>
+        </svg>
+        <span class="chatbot-badge" id="chatbot-badge">AI</span>
+    </div>
+
+    <div id="chatbot-window" class="chatbot-window">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <span class="chatbot-avatar">🤖</span>
+                <div>
+                    <div class="chatbot-name">Java Tutor AI</div>
+                    <div class="chatbot-status" id="chatbot-status">● Trực tuyến</div>
+                </div>
+            </div>
+            <button class="chatbot-close" id="chatbot-close" title="Đóng">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chat-msg bot-msg">
+                <div class="msg-content">Xin chào! 👋 Tôi là AI Tutor đã đọc hết 17 câu lý thuyết Java trên trang này. Hỏi tôi bất cứ điều gì về cú pháp, biến, vòng lặp, mảng, hàm... để ôn thi nhé!</div>
+            </div>
+            <div class="chat-suggestions" id="chat-suggestions">
+                <button class="suggestion-chip" onclick="askSuggestion('Phân biệt while và do-while?')">Phân biệt while và do-while?</button>
+                <button class="suggestion-chip" onclick="askSuggestion('Khi nào dùng break, khi nào dùng continue?')">Khi nào dùng break/continue?</button>
+                <button class="suggestion-chip" onclick="askSuggestion('Pass by value là gì? Cho ví dụ')">Pass by value là gì?</button>
+                <button class="suggestion-chip" onclick="askSuggestion('Sự khác nhau giữa for và for-each?')">Khác nhau for vs for-each?</button>
+                <button class="suggestion-chip" onclick="askSuggestion('8 kiểu dữ liệu nguyên thuỷ trong Java?')">8 kiểu nguyên thuỷ?</button>
+                <button class="suggestion-chip" onclick="askSuggestion('Cấu trúc switch-case hoạt động thế nào?')">switch-case?</button>
+            </div>
+        </div>
+        <div class="chatbot-input-area">
+            <textarea id="chatbot-input" placeholder="Nhập câu hỏi về Java..." rows="1"></textarea>
+            <button id="chatbot-send" class="chatbot-send-btn" title="Gửi">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+        <div class="chatbot-footer">Powered by Gemini AI • Dựa trên 17 câu lý thuyết của trang</div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="chatbot.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
