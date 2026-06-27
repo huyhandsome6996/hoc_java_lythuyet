@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Lý Thuyết Java - Ôn Thi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">☕ Java Theory</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <span class="progress-text" id="progressText">0/17</span>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        <div class="sidebar-content">
+            <h3>📋 Mục Lục</h3>
+            <div class="nav-section">
+                <div class="nav-section-title">Phần 1: Cú Pháp</div>
+                <a href="#q1" class="nav-item" data-q="1">Câu 1: Cấu trúc chương trình</a>
+                <a href="#q2" class="nav-item" data-q="2">Câu 2: Chú thích</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Phần 2: Biến & Kiểu DL</div>
+                <a href="#q3" class="nav-item" data-q="3">Câu 3: Kiểu nguyên thuỷ</a>
+                <a href="#q4" class="nav-item" data-q="4">Câu 4: Biến & Quy tắc đặt tên</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Phần 3: Phép Toán</div>
+                <a href="#q5" class="nav-item" data-q="5">Câu 5: Phép toán số học</a>
+                <a href="#q6" class="nav-item" data-q="6">Câu 6: So sánh & Logic</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Phần 4: Rẽ Nhánh & Lặp ⭐</div>
+                <a href="#q7" class="nav-item" data-q="7">Câu 7: if-else</a>
+                <a href="#q8" class="nav-item" data-q="8">Câu 8: switch-case</a>
+                <a href="#q9" class="nav-item" data-q="9">Câu 9: Vòng lặp for</a>
+                <a href="#q10" class="nav-item" data-q="10">Câu 10: while & do-while</a>
+                <a href="#q11" class="nav-item" data-q="11">Câu 11: break & continue</a>
+                <a href="#q12" class="nav-item" data-q="12">Câu 12: Vòng lặp lồng nhau</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Phần 5: Mảng ⭐</div>
+                <a href="#q13" class="nav-item" data-q="13">Câu 13: Mảng 1 chiều</a>
+                <a href="#q14" class="nav-item" data-q="14">Câu 14: for vs for-each</a>
+                <a href="#q15" class="nav-item" data-q="15">Câu 15: Mảng 2 chiều</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Phần 6: Hàm ⭐</div>
+                <a href="#q16" class="nav-item" data-q="16">Câu 16: Hàm static</a>
+                <a href="#q17" class="nav-item" data-q="17">Câu 17: Parameter & Pass by Value</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>☕ Ôn Thi Lý Thuyết Java</h1>
+            <p>17 câu hỏi trọng tâm • Mô phỏng tương tác • Hiểu sâu để thi tốt</p>
+            <div class="hero-stats">
+                <div class="stat"><span>6</span> Phần</div>
+                <div class="stat"><span>17</span> Câu hỏi</div>
+                <div class="stat"><span>⭐</span> Trọng tâm</div>
+            </div>
+        </section>
+
+        <!-- PHẦN 1: CÚ PHÁP NGÔN NGỮ JAVA -->
+        <section class="part-header" id="part1">
+            <h2>PHẦN 1: CÚ PHÁP NGÔN NGỮ JAVA</h2>
+        </section>
+
+        <!-- Câu 1 -->
+        <article class="question-card" id="q1">
+            <div class="question-header">
+                <span class="question-number">Câu 1</span>
+                <h3>Cấu trúc cơ bản của một chương trình Java. Ý nghĩa của từng thành phần?</h3>
+                <button class="mark-btn" onclick="toggleMark(1)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Một chương trình Java cơ bản gồm các thành phần sau:</p>
+                    <ul>
+                        <li><strong>Khai báo gói (package):</strong> xác định không gian tên chứa class (không bắt buộc).</li>
+                        <li><strong>Khai báo class:</strong> mọi chương trình Java đều phải nằm trong một class. Tên class phải trùng với tên file .java.</li>
+                        <li><strong>Phương thức main:</strong> là điểm bắt đầu thực thi chương trình, có cú pháp cố định: <code>public static void main(String[] args)</code>.</li>
+                        <li><strong>Câu lệnh:</strong> các lệnh thực thi đặt bên trong phương thức main hoặc các phương thức khác, kết thúc bằng dấu chấm phẩy (;).</li>
+                        <li><strong>Chú thích:</strong> dòng đơn (<code>//</code>) hoặc khối (<code>/* ... */</code>), không ảnh hưởng đến việc thực thi.</li>
+                    </ul>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="cmt">// Khai báo class, tên trùng với tên file HelloWorld.java</span>
+<span class="kw">public class</span> <span class="cls">HelloWorld</span> {
+    <span class="cmt">// Phương thức main - điểm khởi đầu của chương trình</span>
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="cmt">// Câu lệnh in ra màn hình</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Xin chào, Java!"</span>);
+    }
+}</pre>
+                    <div class="output">Kết quả: Xin chào, Java!</div>
+                </div>
+                <!-- Interactive: Cấu trúc chương trình -->
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Cấu trúc chương trình Java</h4>
+                    <p class="demo-desc">Nhấn vào từng thành phần để xem giải thích chi tiết</p>
+                    <div class="structure-builder" id="structBuilder">
+                        <div class="struct-block" data-part="package" onclick="showStructInfo('package')">
+                            <span class="struct-label">📦 package</span>
+                            <span class="struct-detail">Khai báo gói</span>
+                        </div>
+                        <div class="struct-arrow">→</div>
+                        <div class="struct-block" data-part="class" onclick="showStructInfo('class')">
+                            <span class="struct-label">🏗️ class</span>
+                            <span class="struct-detail">Khai báo lớp</span>
+                        </div>
+                        <div class="struct-arrow">→</div>
+                        <div class="struct-block highlight" data-part="main" onclick="showStructInfo('main')">
+                            <span class="struct-label">🚀 main()</span>
+                            <span class="struct-detail">Điểm bắt đầu</span>
+                        </div>
+                        <div class="struct-arrow">→</div>
+                        <div class="struct-block" data-part="statement" onclick="showStructInfo('statement')">
+                            <span class="struct-label">📝 statements</span>
+                            <span class="struct-detail">Câu lệnh</span>
+                        </div>
+                        <div class="struct-arrow">→</div>
+                        <div class="struct-block" data-part="comment" onclick="showStructInfo('comment')">
+                            <span class="struct-label">💬 comments</span>
+                            <span class="struct-detail">Chú thích</span>
+                        </div>
+                    </div>
+                    <div class="struct-info-box" id="structInfoBox">
+                        <p>👆 Nhấn vào một thành phần bên trên để xem giải thích</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 2 -->
+        <article class="question-card" id="q2">
+            <div class="question-header">
+                <span class="question-number">Câu 2</span>
+                <h3>Phân biệt chú thích một dòng và chú thích nhiều dòng. Khi nào nên dùng mỗi loại?</h3>
+                <button class="mark-btn" onclick="toggleMark(2)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Java hỗ trợ ba kiểu chú thích:</p>
+                    <ul>
+                        <li><strong>Chú thích một dòng (<code>//</code>):</strong> dùng cho ghi chú ngắn gọn, giải thích một câu lệnh hoặc một biến. Mọi nội dung sau <code>//</code> trên cùng dòng sẽ bị bỏ qua.</li>
+                        <li><strong>Chú thích nhiều dòng (<code>/* ... */</code>):</strong> dùng để giải thích một đoạn logic phức tạp, ghi chú tạm thời vô hiệu hoá nhiều dòng code.</li>
+                        <li><strong>Chú thích Javadoc (<code>/** ... */</code>):</strong> dùng để tạo tài liệu tự động cho class hoặc phương thức (dạng API doc).</li>
+                    </ul>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">CommentDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="cmt">// Đây là chú thích một dòng</span>
+        <span class="kw">int</span> x = <span class="num">10</span>; <span class="cmt">// gán giá trị 10 cho x</span>
+
+        <span class="cmt">/*
+         * Đây là chú thích nhiều dòng.
+         * Dùng để giải thích logic phức tạp.
+         */</span>
+        <span class="kw">int</span> y = x * <span class="num">2</span>;
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"y = "</span> + y); <span class="cmt">// In: y = 20</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Loại chú thích</h4>
+                    <p class="demo-desc">Gõ chú thích và xem Java sẽ hiểu nó như thế nào</p>
+                    <div class="comment-simulator">
+                        <textarea id="commentInput" placeholder="Gõ chú thích, ví dụ: // ghi chú hoặc /* khối */" rows="3"></textarea>
+                        <button class="btn-primary" onclick="analyzeComment()">Phân tích</button>
+                        <div class="comment-result" id="commentResult"></div>
+                    </div>
+                    <div class="comparison-table">
+                        <table>
+                            <thead><tr><th>Tiêu chí</th><th>// Một dòng</th><th>/* Nhiều dòng */</th><th>/** Javadoc */</th></tr></thead>
+                            <tbody>
+                                <tr><td>Số dòng</td><td>1 dòng</td><td>Nhiều dòng</td><td>Nhiều dòng</td></tr>
+                                <tr><td>Ứng dụng</td><td>Ghi chú ngắn</td><td>Giải thích logic dài</td><td>Tạo API doc</td></tr>
+                                <tr><td>Công cụ gen doc</td><td>❌</td><td>❌</td><td>✅ javadoc</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PHẦN 2: BIẾN VÀ KIỂU DỮ LIỆU -->
+        <section class="part-header" id="part2">
+            <h2>PHẦN 2: BIẾN VÀ KIỂU DỮ LIỆU</h2>
+        </section>
+
+        <!-- Câu 3 -->
+        <article class="question-card" id="q3">
+            <div class="question-header">
+                <span class="question-number">Câu 3</span>
+                <h3>Các kiểu dữ liệu nguyên thuỷ (primitive types). Kích thước và phạm vi?</h3>
+                <button class="mark-btn" onclick="toggleMark(3)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Java có 8 kiểu dữ liệu nguyên thuỷ, chia thành 4 nhóm:</p>
+                    <ul>
+                        <li><strong>Nhóm số nguyên:</strong> <code>byte</code> (1 byte), <code>short</code> (2 byte), <code>int</code> (4 byte), <code>long</code> (8 byte).</li>
+                        <li><strong>Nhóm số thực:</strong> <code>float</code> (4 byte, ~7 chữ số thập phân), <code>double</code> (8 byte, ~15 chữ số thập phân).</li>
+                        <li><strong>Kiểu ký tự:</strong> <code>char</code> (2 byte, lưu một ký tự Unicode, giá trị từ 0 đến 65535).</li>
+                        <li><strong>Kiểu logic:</strong> <code>boolean</code> (1 bit, chỉ nhận true hoặc false).</li>
+                    </ul>
+                    <p><strong>Kiểu int và double</strong> là hai kiểu được dùng phổ biến nhất trong lập trình Java cơ bản.</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">PrimitiveTypes</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">byte</span> b = <span class="num">100</span>;
+        <span class="kw">short</span> s = <span class="num">30000</span>;
+        <span class="kw">int</span> i = <span class="num">2_000_000</span>;
+        <span class="kw">long</span> l = <span class="num">9_000_000_000L</span>; <span class="cmt">// cần hậu tố L</span>
+        <span class="kw">float</span> f = <span class="num">3.14f</span>; <span class="cmt">// cần hậu tố f</span>
+        <span class="kw">double</span> d = <span class="num">3.141592653589</span>;
+        <span class="kw">char</span> c = <span class="str">'A'</span>;
+        <span class="kw">boolean</span> flag = <span class="kw">true</span>;
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"int: "</span> + i + <span class="str">", double: "</span> + d + <span class="str">", char: "</span> + c);
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: So sánh kích thước kiểu dữ liệu</h4>
+                    <p class="demo-desc">Xem trực quan kích thước và phạm vi của từng kiểu</p>
+                    <div class="type-visualizer" id="typeVisualizer">
+                        <div class="type-bar" data-type="byte" onclick="showTypeInfo('byte')">
+                            <span class="type-name">byte</span>
+                            <div class="bar" style="width: 12.5%"></div>
+                            <span class="type-size">1 byte</span>
+                        </div>
+                        <div class="type-bar" data-type="short" onclick="showTypeInfo('short')">
+                            <span class="type-name">short</span>
+                            <div class="bar" style="width: 25%"></div>
+                            <span class="type-size">2 byte</span>
+                        </div>
+                        <div class="type-bar" data-type="int" onclick="showTypeInfo('int')">
+                            <span class="type-name">int</span>
+                            <div class="bar" style="width: 50%"></div>
+                            <span class="type-size">4 byte</span>
+                        </div>
+                        <div class="type-bar" data-type="long" onclick="showTypeInfo('long')">
+                            <span class="type-name">long</span>
+                            <div class="bar" style="width: 100%"></div>
+                            <span class="type-size">8 byte</span>
+                        </div>
+                        <div class="type-bar" data-type="float" onclick="showTypeInfo('float')">
+                            <span class="type-name">float</span>
+                            <div class="bar" style="width: 50%"></div>
+                            <span class="type-size">4 byte</span>
+                        </div>
+                        <div class="type-bar" data-type="double" onclick="showTypeInfo('double')">
+                            <span class="type-name">double</span>
+                            <div class="bar" style="width: 100%"></div>
+                            <span class="type-size">8 byte</span>
+                        </div>
+                        <div class="type-bar" data-type="char" onclick="showTypeInfo('char')">
+                            <span class="type-name">char</span>
+                            <div class="bar" style="width: 25%"></div>
+                            <span class="type-size">2 byte</span>
+                        </div>
+                        <div class="type-bar" data-type="boolean" onclick="showTypeInfo('boolean')">
+                            <span class="type-name">boolean</span>
+                            <div class="bar" style="width: 6%"></div>
+                            <span class="type-size">1 bit</span>
+                        </div>
+                    </div>
+                    <div class="type-info-box" id="typeInfoBox">
+                        <p>👆 Nhấn vào một kiểu dữ liệu để xem chi tiết</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 4 -->
+        <article class="question-card" id="q4">
+            <div class="question-header">
+                <span class="question-number">Câu 4</span>
+                <h3>Biến trong Java là gì? Phân biệt biến cục bộ và biến static. Quy tắc đặt tên biến?</h3>
+                <button class="mark-btn" onclick="toggleMark(4)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Biến là vùng nhớ được đặt tên dùng để lưu trữ giá trị trong quá trình thực thi chương trình. Biến phải được khai báo trước khi sử dụng.</p>
+                    <ul>
+                        <li><strong>Biến cục bộ (local variable):</strong> khai báo bên trong phương thức, chỉ tồn tại trong phạm vi phương thức đó, không có giá trị mặc định.</li>
+                        <li><strong>Biến static (class variable):</strong> khai báo với từ khoá <code>static</code> bên trong class nhưng ngoài phương thức, dùng chung cho toàn bộ chương trình, có giá trị mặc định (0, false, null,...).</li>
+                    </ul>
+                    <p><strong>Quy tắc đặt tên:</strong> bắt đầu bằng chữ cái, dấu <code>_</code> hoặc <code>$</code>; không chứa khoảng trắng; phân biệt hoa thường; không trùng từ khoá Java. Quy ước dùng <strong>camelCase</strong> (ví dụ: soLuongSanPham).</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">VariableDemo</span> {
+    <span class="kw">static int</span> demLan = <span class="num">0</span>; <span class="cmt">// biến static, dùng chung</span>
+
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span> tuoi = <span class="num">20</span>; <span class="cmt">// biến cục bộ</span>
+        <span class="kw">double</span> diemTB = <span class="num">8.5</span>; <span class="cmt">// biến cục bộ</span>
+        demLan++;
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Tuoi: "</span> + tuoi + <span class="str">", Diem: "</span> + diemTB);
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Dem lan: "</span> + demLan);
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Phạm vi biến</h4>
+                    <p class="demo-desc">Xem trực quan sự khác biệt giữa biến cục bộ và biến static</p>
+                    <div class="scope-simulator" id="scopeSim">
+                        <div class="scope-code">
+                            <div class="scope-line class-line"><span class="scope-keyword">class</span> VariableDemo {</div>
+                            <div class="scope-line static-line" onclick="highlightScope('static')">
+                                <span class="scope-badge static-badge">STATIC</span>
+                                <span class="scope-keyword">static int</span> demLan = 0; <span class="scope-comment">← tồn tại suốt chương trình</span>
+                            </div>
+                            <div class="scope-line method-line"><span class="scope-keyword">void</span> main() {</div>
+                            <div class="scope-line local-line" onclick="highlightScope('local')">
+                                <span class="scope-badge local-badge">LOCAL</span>
+                                <span class="scope-keyword">int</span> tuoi = 20; <span class="scope-comment">← chỉ tồn tại trong main()</span>
+                            </div>
+                            <div class="scope-line method-end">}</div>
+                            <div class="scope-line class-end">}</div>
+                        </div>
+                        <div class="scope-info" id="scopeInfo">
+                            <p>Nhấn vào biến để xem phạm vi</p>
+                        </div>
+                        <button class="btn-primary" onclick="runScopeSim()">▶ Chạy mô phỏng</button>
+                        <div class="scope-output" id="scopeOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PHẦN 3: CÁC PHÉP TOÁN -->
+        <section class="part-header" id="part3">
+            <h2>PHẦN 3: CÁC PHÉP TOÁN SỐ HỌC VÀ LOGIC</h2>
+        </section>
+
+        <!-- Câu 5 -->
+        <article class="question-card" id="q5">
+            <div class="question-header">
+                <span class="question-number">Câu 5</span>
+                <h3>Các phép toán số học trong Java. Toán tử % (modulo) dùng để làm gì?</h3>
+                <button class="mark-btn" onclick="toggleMark(5)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Java hỗ trợ các phép toán số học cơ bản: <code>+</code> (cộng), <code>-</code> (trừ), <code>*</code> (nhân), <code>/</code> (chia), <code>%</code> (lấy phần dư).</p>
+                    <ul>
+                        <li>Phép chia <code>/</code> với hai toán hạng nguyên sẽ trả về phần nguyên (ví dụ: 7 / 2 = 3).</li>
+                        <li>Phép <code>%</code> trả về phần dư của phép chia nguyên (ví dụ: 7 % 2 = 1). Dùng phổ biến để kiểm tra chẵn/lẻ, chia hết, lấy chữ số cuối,...</li>
+                        <li>Ngoài ra có các toán tử tăng/giảm: <code>++</code> (tăng 1), <code>--</code> (giảm 1), và gán kết hợp: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>.</li>
+                    </ul>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">ArithmeticDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span> a = <span class="num">17</span>, b = <span class="num">5</span>;
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Tong: "</span> + (a + b));     <span class="cmt">// 22</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Hieu: "</span> + (a - b));     <span class="cmt">// 12</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Tich: "</span> + (a * b));     <span class="cmt">// 85</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Thuong: "</span> + (a / b));   <span class="cmt">// 3 (phần nguyên)</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Du: "</span> + (a % b));       <span class="cmt">// 2</span>
+
+        <span class="cmt">// Ứng dụng % kiểm tra chẵn/lẻ</span>
+        <span class="kw">if</span> (a % <span class="num">2</span> == <span class="num">0</span>)
+            <span class="cls">System</span>.out.<span class="fn">println</span>(a + <span class="str">" la so chan"</span>);
+        <span class="kw">else</span>
+            <span class="cls">System</span>.out.<span class="fn">println</span>(a + <span class="str">" la so le"</span>);
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Máy tính số học Java</h4>
+                    <p class="demo-desc">Nhập hai số và xem kết quả tất cả phép toán</p>
+                    <div class="calc-simulator">
+                        <div class="calc-inputs">
+                            <label>a = <input type="number" id="calcA" value="17"></label>
+                            <label>b = <input type="number" id="calcB" value="5"></label>
+                            <button class="btn-primary" onclick="runCalc()">Tính</button>
+                        </div>
+                        <div class="calc-results" id="calcResults">
+                            <div class="calc-item"><span class="calc-op">a + b</span><span class="calc-val" id="calcAdd">22</span></div>
+                            <div class="calc-item"><span class="calc-op">a - b</span><span class="calc-val" id="calcSub">12</span></div>
+                            <div class="calc-item"><span class="calc-op">a * b</span><span class="calc-val" id="calcMul">85</span></div>
+                            <div class="calc-item"><span class="calc-op">a / b</span><span class="calc-val" id="calcDiv">3</span></div>
+                            <div class="calc-item highlight-op"><span class="calc-op">a % b</span><span class="calc-val" id="calcMod">2</span></div>
+                        </div>
+                        <div class="modulo-visual" id="moduloVisual">
+                            <h5>Mô phỏng phép % (modulo):</h5>
+                            <div id="moduloBlocks"></div>
+                            <p id="moduloExplain"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 6 -->
+        <article class="question-card" id="q6">
+            <div class="question-header">
+                <span class="question-number">Câu 6</span>
+                <h3>Các phép toán so sánh và logic trong Java. Cách kết hợp nhiều điều kiện?</h3>
+                <button class="mark-btn" onclick="toggleMark(6)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Phép toán so sánh trả về giá trị boolean (true/false): <code>==</code> (bằng), <code>!=</code> (khác), <code>></code> (lớn hơn), <code><</code> (nhỏ hơn), <code>>=</code> (lớn hơn hoặc bằng), <code><=</code> (nhỏ hơn hoặc bằng).</p>
+                    <p>Phép toán logic dùng để kết hợp nhiều điều kiện:</p>
+                    <ul>
+                        <li><code>&&</code> (AND): cả hai điều kiện đều đúng thì kết quả mới là true. Nếu điều kiện đầu sai, điều kiện sau không được kiểm tra (short-circuit).</li>
+                        <li><code>||</code> (OR): chỉ cần một trong hai điều kiện đúng là kết quả true.</li>
+                        <li><code>!</code> (NOT): phủ định, đổi true thành false và ngược lại.</li>
+                    </ul>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">LogicDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span> tuoi = <span class="num">20</span>;
+        <span class="kw">double</span> diemTB = <span class="num">7.5</span>;
+
+        <span class="cmt">// Kết hợp && và ||</span>
+        <span class="kw">boolean</span> duDieuKien = (tuoi >= <span class="num">18</span>) && (diemTB >= <span class="num">5.0</span>);
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Du dieu kien: "</span> + duDieuKien); <span class="cmt">// true</span>
+
+        <span class="kw">boolean</span> canhBao = (tuoi <<span class="num">18</span>) || (diemTB <<span class="num">4.0</span>);
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Can canh bao: "</span> + canhBao); <span class="cmt">// false</span>
+
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Phu dinh: "</span> + !duDieuKien); <span class="cmt">// false</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Bảng chân trị (Truth Table)</h4>
+                    <p class="demo-desc">Chọn giá trị A và B, xem kết quả của các phép logic</p>
+                    <div class="logic-simulator">
+                        <div class="logic-inputs">
+                            <div class="logic-toggle">
+                                <span>A =</span>
+                                <button class="toggle-btn" id="logicA" onclick="toggleLogic('A')">true</button>
+                            </div>
+                            <div class="logic-toggle">
+                                <span>B =</span>
+                                <button class="toggle-btn" id="logicB" onclick="toggleLogic('B')">true</button>
+                            </div>
+                        </div>
+                        <div class="logic-results">
+                            <div class="logic-gate">
+                                <div class="gate-symbol">A && B</div>
+                                <div class="gate-result" id="andResult">true</div>
+                                <div class="gate-name">AND</div>
+                            </div>
+                            <div class="logic-gate">
+                                <div class="gate-symbol">A || B</div>
+                                <div class="gate-result" id="orResult">true</div>
+                                <div class="gate-name">OR</div>
+                            </div>
+                            <div class="logic-gate">
+                                <div class="gate-symbol">!A</div>
+                                <div class="gate-result" id="notResult">false</div>
+                                <div class="gate-name">NOT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PHẦN 4: RẼ NHÁNH VÀ LẶP -->
+        <section class="part-header important" id="part4">
+            <h2>PHẦN 4: CÁC CẤU TRÚC RẼ NHÁNH VÀ LẶP ⭐ TRỌNG TÂM</h2>
+        </section>
+
+        <!-- Câu 7 -->
+        <article class="question-card" id="q7">
+            <div class="question-header">
+                <span class="question-number">Câu 7</span>
+                <h3>Câu lệnh if-else. Phân biệt if đơn, if-else và if-else if lồng nhau.</h3>
+                <button class="mark-btn" onclick="toggleMark(7)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Câu lệnh if-else cho phép thực thi các khối lệnh khác nhau tuỳ theo điều kiện:</p>
+                    <ul>
+                        <li><strong>if đơn:</strong> chỉ thực thi khối lệnh khi điều kiện là true.</li>
+                        <li><strong>if-else:</strong> nếu điều kiện true thì thực thi khối if, ngược lại thực thi khối else.</li>
+                        <li><strong>if-else if-...-else:</strong> kiểm tra nhiều điều kiện theo thứ tự; khi một điều kiện đúng, thực thi khối tương ứng và bỏ qua các điều kiện còn lại.</li>
+                    </ul>
+                    <p><strong>Lưu ý:</strong> nếu khối lệnh chỉ có một câu lệnh, dấu ngoặc {} có thể bỏ qua, nhưng nên giữ lại để tránh lỗi logic khi bổ sung code sau này.</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">IfElseDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">double</span> diemTB = <span class="num">7.2</span>;
+
+        <span class="kw">if</span> (diemTB >= <span class="num">9.0</span>) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Xuat sac"</span>);
+        } <span class="kw">else if</span> (diemTB >= <span class="num">8.0</span>) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Gioi"</span>);
+        } <span class="kw">else if</span> (diemTB >= <span class="num">6.5</span>) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Kha"</span>);
+        } <span class="kw">else if</span> (diemTB >= <span class="num">5.0</span>) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Trung binh"</span>);
+        } <span class="kw">else</span> {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Yeu"</span>);
+        }
+        <span class="cmt">// Kết quả: Kha</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: if-else Step-by-Step</h4>
+                    <p class="demo-desc">Kéo slider để thay đổi điểm và xem nhánh nào được thực thi</p>
+                    <div class="ifelse-simulator">
+                        <div class="slider-container">
+                            <label>diemTB = <span id="diemVal">7.2</span></label>
+                            <input type="range" id="diemSlider" min="0" max="10" step="0.1" value="7.2" oninput="updateIfElse()">
+                        </div>
+                        <div class="ifelse-flow" id="ifelseFlow">
+                            <div class="flow-node condition" id="cond1">
+                                <span>diemTB >= 9.0?</span>
+                                <span class="flow-result" id="cond1Result">❌</span>
+                                <div class="flow-branch yes">Xuất sắc</div>
+                            </div>
+                            <div class="flow-node condition" id="cond2">
+                                <span>diemTB >= 8.0?</span>
+                                <span class="flow-result" id="cond2Result">❌</span>
+                                <div class="flow-branch yes">Giỏi</div>
+                            </div>
+                            <div class="flow-node condition" id="cond3">
+                                <span>diemTB >= 6.5?</span>
+                                <span class="flow-result" id="cond3Result">✅</span>
+                                <div class="flow-branch yes active-branch">Khá</div>
+                            </div>
+                            <div class="flow-node condition dim" id="cond4">
+                                <span>diemTB >= 5.0?</span>
+                                <span class="flow-result" id="cond4Result">⏭️</span>
+                                <div class="flow-branch yes">Trung bình</div>
+                            </div>
+                            <div class="flow-node else-node dim" id="cond5">
+                                <span>else</span>
+                                <div class="flow-branch yes">Yếu</div>
+                            </div>
+                        </div>
+                        <div class="ifelse-output" id="ifelseOutput">Kết quả: <strong>Khá</strong></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 8 -->
+        <article class="question-card" id="q8">
+            <div class="question-header">
+                <span class="question-number">Câu 8</span>
+                <h3>Câu lệnh switch-case hoạt động như thế nào? Vai trò của break và default?</h3>
+                <button class="mark-btn" onclick="toggleMark(8)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Câu lệnh switch so sánh giá trị của một biểu thức với nhiều hằng số (case). Khi tìm được case khớp, chương trình bắt đầu thực thi từ đó.</p>
+                    <ul>
+                        <li><strong>break:</strong> dùng để thoát khỏi switch sau khi thực thi xong một case. Nếu không có break, chương trình sẽ tiếp tục thực thi các case tiếp theo (fall-through).</li>
+                        <li><strong>default:</strong> khối lệnh được thực thi khi không có case nào khớp (tương đương else trong if-else). Đặt cuối nhưng không bắt buộc.</li>
+                    </ul>
+                    <p>switch hoạt động được với: <code>int</code>, <code>char</code>, <code>String</code> và <code>enum</code>. <strong>Không</strong> dùng được với double, float, long.</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">SwitchDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span> thu = <span class="num">3</span>;
+
+        <span class="kw">switch</span> (thu) {
+            <span class="kw">case</span> <span class="num">2</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Thứ Hai"</span>); <span class="kw">break</span>;
+            <span class="kw">case</span> <span class="num">3</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Thứ Ba"</span>); <span class="kw">break</span>;
+            <span class="kw">case</span> <span class="num">4</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Thứ Tư"</span>); <span class="kw">break</span>;
+            <span class="kw">case</span> <span class="num">5</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Thứ Năm"</span>); <span class="kw">break</span>;
+            <span class="kw">case</span> <span class="num">6</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Thứ Sáu"</span>); <span class="kw">break</span>;
+            <span class="kw">case</span> <span class="num">7</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Thứ Bảy"</span>); <span class="kw">break</span>;
+            <span class="kw">case</span> <span class="num">8</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Chủ Nhật"</span>); <span class="kw">break</span>;
+            <span class="kw">default</span>: <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Không hợp lệ"</span>);
+        }
+        <span class="cmt">// Kết quả: Thứ Ba</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: switch-case với / không có break</h4>
+                    <p class="demo-desc">Chọn giá trị và bật/tắt break để thấy sự khác biệt</p>
+                    <div class="switch-simulator">
+                        <div class="switch-controls">
+                            <label>thu = <select id="switchVal" onchange="updateSwitch()">
+                                <option value="2">2 (Thứ Hai)</option>
+                                <option value="3" selected>3 (Thứ Ba)</option>
+                                <option value="4">4 (Thứ Tư)</option>
+                                <option value="5">5 (Thứ Năm)</option>
+                                <option value="9">9 (Không hợp lệ)</option>
+                            </select></label>
+                            <label><input type="checkbox" id="hasBreak" checked onchange="updateSwitch()"> Có break</label>
+                        </div>
+                        <div class="switch-flow" id="switchFlow"></div>
+                        <div class="switch-output" id="switchOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 9 -->
+        <article class="question-card" id="q9">
+            <div class="question-header">
+                <span class="question-number">Câu 9</span>
+                <h3>Vòng lặp for trong Java. Cú pháp, cách hoạt động và khi nào nên dùng?</h3>
+                <button class="mark-btn" onclick="toggleMark(9)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Vòng lặp for có cú pháp: <code>for (khởi tạo; điều kiện; cập nhật) { khối lệnh }</code></p>
+                    <p>Các bước thực thi:</p>
+                    <ul>
+                        <li><strong>Bước 1 - Khởi tạo:</strong> chạy một lần duy nhất khi bắt đầu vòng lặp.</li>
+                        <li><strong>Bước 2 - Kiểm tra điều kiện:</strong> nếu true thì thực thi khối lệnh; nếu false thì thoát vòng lặp.</li>
+                        <li><strong>Bước 3 - Thực thi khối lệnh.</strong></li>
+                        <li><strong>Bước 4 - Cập nhật:</strong> thực hiện biểu thức cập nhật, rồi quay lại Bước 2.</li>
+                    </ul>
+                    <p>Nên dùng for khi <strong>biết trước số lần lặp</strong>. Ngoài ra còn có for-each (enhanced for) dùng để duyệt mảng hoặc collection.</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">ForDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="cmt">// In bảng nhân 5</span>
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= <span class="num">10</span>; i++) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"5 x "</span> + i + <span class="str">" = "</span> + (<span class="num">5</span> * i));
+        }
+
+        <span class="cmt">// Tính tổng 1 + 2 + ... + 100</span>
+        <span class="kw">int</span> tong = <span class="num">0</span>;
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= <span class="num">100</span>; i++) {
+            tong += i;
+        }
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Tong 1->100 = "</span> + tong); <span class="cmt">// 5050</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Vòng lặp for Step-by-Step</h4>
+                    <p class="demo-desc">Nhấn nút để đi từng bước qua vòng lặp for</p>
+                    <div class="for-simulator">
+                        <div class="for-controls">
+                            <span class="for-code">for (int i = <span id="forInit">1</span>; i <= <span id="forCond">10</span>; i++)</span>
+                            <div class="for-buttons">
+                                <button class="btn-primary" onclick="forStep()">▶ Bước tiếp</button>
+                                <button class="btn-secondary" onclick="forReset()">↺ Reset</button>
+                            </div>
+                        </div>
+                        <div class="for-state">
+                            <div class="state-item">i = <span id="forI" class="state-val">-</span></div>
+                            <div class="state-item">Điều kiện (i<=10) = <span id="forCheck" class="state-val">-</span></div>
+                            <div class="state-item">Bước hiện tại: <span id="forStep" class="state-val">Chưa bắt đầu</span></div>
+                        </div>
+                        <div class="for-output" id="forOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 10 -->
+        <article class="question-card" id="q10">
+            <div class="question-header">
+                <span class="question-number">Câu 10</span>
+                <h3>Vòng lặp while và do-while. Phân biệt hai vòng lặp này.</h3>
+                <button class="mark-btn" onclick="toggleMark(10)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p><strong>while:</strong> kiểm tra điều kiện trước, chỉ thực thi khối lệnh khi điều kiện là true. Nếu điều kiện sai ngay từ đầu, khối lệnh không bao giờ được thực thi.</p>
+                    <p><strong>do-while:</strong> thực thi khối lệnh trước, sau đó mới kiểm tra điều kiện. Đảm bảo khối lệnh được thực thi ít nhất một lần bất kể điều kiện.</p>
+                    <p><strong>Khi nào dùng:</strong></p>
+                    <ul>
+                        <li><strong>while:</strong> dùng khi không chắc có cần lặp không (số lần lặp phụ thuộc vào điều kiện).</li>
+                        <li><strong>do-while:</strong> dùng khi cần thực thi ít nhất một lần, ví dụ: nhập liệu từ người dùng và kiểm tra hợp lệ.</li>
+                    </ul>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">WhileDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="cmt">// while: in các số chẵn từ 2 đến 10</span>
+        <span class="kw">int</span> n = <span class="num">2</span>;
+        <span class="kw">while</span> (n <= <span class="num">10</span>) {
+            <span class="cls">System</span>.out.<span class="fn">print</span>(n + <span class="str">" "</span>);
+            n += <span class="num">2</span>;
+        }
+        <span class="cls">System</span>.out.<span class="fn">println</span>();
+
+        <span class="cmt">// do-while: đếm ngược từ 5 về 1</span>
+        <span class="kw">int</span> dem = <span class="num">5</span>;
+        <span class="kw">do</span> {
+            <span class="cls">System</span>.out.<span class="fn">print</span>(dem + <span class="str">" "</span>);
+            dem--;
+        } <span class="kw">while</span> (dem >= <span class="num">1</span>);
+        <span class="cmt">// Kết quả: 5 4 3 2 1</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: So sánh while vs do-while</h4>
+                    <p class="demo-desc">Nhập điều kiện ban đầu để thấy sự khác biệt khi điều kiện sai từ đầu</p>
+                    <div class="while-compare">
+                        <div class="while-panel">
+                            <h5>while (điều kiện) { ... }</h5>
+                            <label>Giá trị ban đầu n = <input type="number" id="whileN" value="2"></label>
+                            <label>Điều kiện: n <= <input type="number" id="whileLimit" value="10"></label>
+                            <button class="btn-primary" onclick="runWhileSim('while')">▶ Chạy while</button>
+                            <div class="while-flow" id="whileFlow"></div>
+                            <div class="while-output" id="whileOutput"></div>
+                        </div>
+                        <div class="while-panel">
+                            <h5>do { ... } while (điều kiện)</h5>
+                            <label>Giá trị ban đầu n = <input type="number" id="doWhileN" value="2"></label>
+                            <label>Điều kiện: n <= <input type="number" id="doWhileLimit" value="10"></label>
+                            <button class="btn-primary" onclick="runWhileSim('dowhile')">▶ Chạy do-while</button>
+                            <div class="while-flow" id="dowhileFlow"></div>
+                            <div class="while-output" id="dowhileOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 11 -->
+        <article class="question-card" id="q11">
+            <div class="question-header">
+                <span class="question-number">Câu 11</span>
+                <h3>Lệnh break và continue trong vòng lặp. Phân biệt hai lệnh này.</h3>
+                <button class="mark-btn" onclick="toggleMark(11)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <ul>
+                        <li><strong>break:</strong> kết thúc ngay vòng lặp đang chạy, chương trình tiếp tục thực thi câu lệnh sau vòng lặp.</li>
+                        <li><strong>continue:</strong> bỏ qua phần còn lại của lần lặp hiện tại, nhảy ngay lên kiểm tra điều kiện của lần lặp tiếp theo.</li>
+                    </ul>
+                    <p>Cả hai lệnh đều áp dụng cho vòng lặp gần nhất bao quanh chúng. Khi dùng với vòng lặp lồng nhau, cần chú ý phạm vi tác dụng.</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">BreakContinueDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="cmt">// break: tìm số nguyên tố đầu tiên lớn hơn 10</span>
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">11</span>; i <= <span class="num">100</span>; i++) {
+            <span class="kw">boolean</span> laNguyenTo = <span class="kw">true</span>;
+            <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">2</span>; j <= Math.<span class="fn">sqrt</span>(i); j++) {
+                <span class="kw">if</span> (i % j == <span class="num">0</span>) { laNguyenTo = <span class="kw">false</span>; <span class="kw">break</span>; }
+            }
+            <span class="kw">if</span> (laNguyenTo) {
+                <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Số nguyên tố đầu tiên > 10: "</span> + i);
+                <span class="kw">break</span>;
+            }
+        }
+
+        <span class="cmt">// continue: in số lẻ từ 1 đến 10</span>
+        <span class="cls">System</span>.out.<span class="fn">print</span>(<span class="str">"Số lẻ: "</span>);
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= <span class="num">10</span>; i++) {
+            <span class="kw">if</span> (i % <span class="num">2</span> == <span class="num">0</span>) <span class="kw">continue</span>; <span class="cmt">// bỏ qua số chẵn</span>
+            <span class="cls">System</span>.out.<span class="fn">print</span>(i + <span class="str">" "</span>);
+        }
+        <span class="cmt">// Kết quả: Số lẻ: 1 3 5 7 9</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: break vs continue</h4>
+                    <p class="demo-desc">Xem trực quan cách break và continue ảnh hưởng đến vòng lặp</p>
+                    <div class="break-continue-sim">
+                        <div class="bc-choice">
+                            <button class="btn-primary" onclick="runBCSim('break')">▶ break</button>
+                            <button class="btn-primary" onclick="runBCSim('continue')">▶ continue</button>
+                        </div>
+                        <div class="bc-track" id="bcTrack">
+                            <!-- Generated by JS -->
+                        </div>
+                        <div class="bc-explain" id="bcExplain">Chọn break hoặc continue để xem mô phỏng</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 12 -->
+        <article class="question-card" id="q12">
+            <div class="question-header">
+                <span class="question-number">Câu 12</span>
+                <h3>Vòng lặp lồng nhau (nested loop). In tam giác sao.</h3>
+                <button class="mark-btn" onclick="toggleMark(12)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Vòng lặp lồng nhau là khi một vòng lặp (vòng trong) được đặt bên trong một vòng lặp khác (vòng ngoài). Với mỗi lần lặp của vòng ngoài, vòng trong thực thi toàn bộ chu kỳ của nó.</p>
+                    <p><strong>Ứng dụng phổ biến:</strong> in bảng nhân, duyệt mảng 2 chiều, vẽ hình. Độ phức tạp thời gian thường là O(n²) với vòng lặp lồng đôi.</p>
+                    <p><strong>Lưu ý:</strong> biến đếm của vòng trong và vòng ngoài phải có tên khác nhau (thường dùng i và j).</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">NestedLoopDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span> n = <span class="num">5</span>;
+
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">1</span>; i <= n; i++) {
+            <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">1</span>; j <= i; j++) {
+                <span class="cls">System</span>.out.<span class="fn">print</span>(<span class="str">"* "</span>);
+            }
+            <span class="cls">System</span>.out.<span class="fn">println</span>();
+        }
+    }
+}</pre>
+                    <div class="output">*<br>* *<br>* * *<br>* * * *<br>* * * * *</div>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Sinh tam giác sao</h4>
+                    <p class="demo-desc">Điều chỉnh số dòng và xem tam giác sao được tạo ra từng bước</p>
+                    <div class="star-simulator">
+                        <label>Số dòng n = <input type="range" id="starN" min="1" max="10" value="5" oninput="updateStars()"><span id="starNVal">5</span></label>
+                        <button class="btn-primary" onclick="animateStars()">▶ Chạy từng bước</button>
+                        <button class="btn-secondary" onclick="showStarsNow()">⏩ Hiện ngay</button>
+                        <div class="star-output" id="starOutput"></div>
+                        <div class="star-step-info" id="starStepInfo"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PHẦN 5: MẢNG -->
+        <section class="part-header important" id="part5">
+            <h2>PHẦN 5: MẢNG 1 CHIỀU VÀ MẢNG 2 CHIỀU ⭐ TRỌNG TÂM</h2>
+        </section>
+
+        <!-- Câu 13 -->
+        <article class="question-card" id="q13">
+            <div class="question-header">
+                <span class="question-number">Câu 13</span>
+                <h3>Mảng trong Java. Khai báo, khởi tạo và truy cập phần tử mảng 1 chiều.</h3>
+                <button class="mark-btn" onclick="toggleMark(13)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Mảng (array) là cấu trúc dữ liệu lưu trữ nhiều phần tử cùng kiểu, liên tiếp trong bộ nhớ. Mỗi phần tử được truy cập qua chỉ số (index) bắt đầu từ 0.</p>
+                    <p>Khai báo và khởi tạo mảng 1 chiều:</p>
+                    <ul>
+                        <li>Khai báo rồi tạo: <code>int[] arr = new int[5];</code> (5 phần tử, giá trị mặc định là 0).</li>
+                        <li>Khởi tạo trực tiếp: <code>int[] arr = {10, 20, 30, 40, 50};</code></li>
+                        <li>Kích thước mảng lấy qua: <code>arr.length</code> (không phải arr.length()).</li>
+                    </ul>
+                    <p>Truy cập phần tử: <code>arr[i]</code> với i từ 0 đến arr.length - 1. Truy cập ngoài phạm vi gây ra lỗi <code>ArrayIndexOutOfBoundsException</code>.</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">ArrayDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span>[] diem = {<span class="num">7</span>, <span class="num">8</span>, <span class="num">9</span>, <span class="num">6</span>, <span class="num">10</span>};
+
+        <span class="kw">int</span> tong = <span class="num">0</span>, max = diem[<span class="num">0</span>];
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < diem.length; i++) {
+            tong += diem[i];
+            <span class="kw">if</span> (diem[i] > max) max = diem[i];
+        }
+        <span class="kw">double</span> tb = (<span class="kw">double</span>) tong / diem.length;
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Tong: "</span> + tong);
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Max: "</span> + max);
+        <span class="cls">System</span>.out.<span class="fn">printf</span>(<span class="str">"Trung binh: %.2f%n"</span>, tb);
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Bộ nhớ mảng 1 chiều</h4>
+                    <p class="demo-desc">Nhấn vào ô để xem chỉ số và giá trị. Kéo thanh để duyệt mảng.</p>
+                    <div class="array-simulator">
+                        <div class="array-visual" id="array1DVisual">
+                            <!-- Generated by JS -->
+                        </div>
+                        <div class="array-info" id="array1DInfo">Khởi tạo mảng: int[] diem = {7, 8, 9, 6, 10}</div>
+                        <button class="btn-primary" onclick="traverseArray1D()">▶ Duyệt mảng</button>
+                        <div class="array-traverse-output" id="array1DOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 14 -->
+        <article class="question-card" id="q14">
+            <div class="question-header">
+                <span class="question-number">Câu 14</span>
+                <h3>Duyệt mảng bằng for thông thường và for-each. Ưu nhược điểm?</h3>
+                <button class="mark-btn" onclick="toggleMark(14)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Có hai cách chính để duyệt mảng trong Java:</p>
+                    <ul>
+                        <li><strong>for thông thường:</strong> dùng biến chỉ số i, truy cập arr[i]. Ưu điểm: có thể truy cập, sửa đổi phần tử và biết vị trí (index). Nhược điểm: cú pháp dài hơn.</li>
+                        <li><strong>for-each (enhanced for):</strong> cú pháp <code>for (kiểu pt : mang)</code>. Ưu điểm: ngắn gọn, dễ đọc, không lo sai chỉ số. Nhược điểm: không lấy được chỉ số, không thể sửa đổi trực tiếp giá trị phần tử (với kiểu nguyên thuỷ).</li>
+                    </ul>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">ArrayTraversal</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="cls">String</span>[] tenSV = {<span class="str">"An"</span>, <span class="str">"Bình"</span>, <span class="str">"Chí"</span>, <span class="str">"Dũng"</span>};
+
+        <span class="cmt">// for thông thường - cần biết chỉ số</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Danh sách sinh viên:"</span>);
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < tenSV.length; i++) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>((i+<span class="num">1</span>) + <span class="str">". "</span> + tenSV[i]);
+        }
+
+        <span class="cmt">// for-each - đơn giản, đọc phần tử</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Dùng for-each:"</span>);
+        <span class="kw">for</span> (<span class="cls">String</span> ten : tenSV) {
+            <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"- "</span> + ten);
+        }
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 So sánh: for vs for-each</h4>
+                    <div class="foreach-compare">
+                        <div class="compare-panel">
+                            <h5>for thông thường</h5>
+                            <pre class="mini-code">for (int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}</pre>
+                            <div class="compare-features">
+                                <div class="feat yes">✅ Biết vị trí (index)</div>
+                                <div class="feat yes">✅ Sửa đổi phần tử</div>
+                                <div class="feat no">❌ Cú pháp dài hơn</div>
+                            </div>
+                        </div>
+                        <div class="compare-panel">
+                            <h5>for-each</h5>
+                            <pre class="mini-code">for (String ten : tenSV) {
+    System.out.println(ten);
+}</pre>
+                            <div class="compare-features">
+                                <div class="feat no">❌ Không biết vị trí</div>
+                                <div class="feat no">❌ Không sửa được (primitive)</div>
+                                <div class="feat yes">✅ Cú pháp ngắn gọn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 15 -->
+        <article class="question-card" id="q15">
+            <div class="question-header">
+                <span class="question-number">Câu 15</span>
+                <h3>Mảng 2 chiều trong Java. Khai báo, khởi tạo và duyệt mảng 2 chiều.</h3>
+                <button class="mark-btn" onclick="toggleMark(15)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Mảng 2 chiều là mảng của các mảng, thường dùng để biểu diễn ma trận, bảng dữ liệu. Mỗi phần tử được truy cập bằng hai chỉ số: [hàng][cột].</p>
+                    <ul>
+                        <li>Khai báo rồi tạo: <code>int[][] matrix = new int[3][4];</code> (3 hàng, 4 cột).</li>
+                        <li>Khởi tạo trực tiếp: <code>int[][] a = {{1,2,3}, {4,5,6}, {7,8,9}};</code></li>
+                        <li>Số hàng: <code>a.length</code>. Số cột hàng i: <code>a[i].length</code>.</li>
+                    </ul>
+                    <p>Duyệt mảng 2 chiều dùng vòng lặp lồng nhau: vòng ngoài duyệt hàng, vòng trong duyệt cột.</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">Array2DDemo</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span>[][] matrix = {
+            {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>},
+            {<span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>},
+            {<span class="num">7</span>, <span class="num">8</span>, <span class="num">9</span>}
+        };
+
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i < matrix.length; i++) {
+            <span class="kw">for</span> (<span class="kw">int</span> j = <span class="num">0</span>; j < matrix[i].length; j++) {
+                <span class="cls">System</span>.out.<span class="fn">printf</span>(<span class="str">"%4d"</span>, matrix[i][j]);
+            }
+            <span class="cls">System</span>.out.<span class="fn">println</span>();
+        }
+
+        <span class="kw">int</span> tong = <span class="num">0</span>;
+        <span class="kw">for</span> (<span class="kw">int</span>[] hang : matrix)
+            <span class="kw">for</span> (<span class="kw">int</span> pt : hang)
+                tong += pt;
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Tong: "</span> + tong); <span class="cmt">// 45</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Mảng 2 chiều (Ma trận)</h4>
+                    <p class="demo-desc">Nhấn vào ô để xem chỉ số [hàng][cột]. Nhấn nút để duyệt ma trận.</p>
+                    <div class="matrix-simulator">
+                        <div class="matrix-grid" id="matrixGrid">
+                            <!-- Generated by JS -->
+                        </div>
+                        <div class="matrix-info" id="matrixInfo">Ma trận 3x3 - Nhấn vào ô để xem chi tiết</div>
+                        <button class="btn-primary" onclick="traverseMatrix()">▶ Duyệt ma trận</button>
+                        <div class="matrix-traverse-output" id="matrixOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PHẦN 6: HÀM -->
+        <section class="part-header important" id="part6">
+            <h2>PHẦN 6: HÀM (static) ⭐ TRỌNG TÂM</h2>
+        </section>
+
+        <!-- Câu 16 -->
+        <article class="question-card" id="q16">
+            <div class="question-header">
+                <span class="question-number">Câu 16</span>
+                <h3>Hàm (phương thức) trong Java. Lợi ích? Cú pháp khai báo hàm static?</h3>
+                <button class="mark-btn" onclick="toggleMark(16)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <p>Hàm (method) là một khối lệnh được đặt tên, thực hiện một nhiệm vụ cụ thể, có thể tái sử dụng nhiều lần bằng cách gọi hàm.</p>
+                    <p><strong>Lợi ích:</strong> tái sử dụng code, chia nhỏ bài toán lớn (decomposition), dễ đọc và bảo trì, tránh lặp code.</p>
+                    <p><strong>Cú pháp khai báo hàm static:</strong></p>
+                    <pre class="theory-code">[access_modifier] static [kiểu_trả_về] tenHam([danh_sách_tham_số]) {
+    thân_hàm
+}</pre>
+                    <ul>
+                        <li><strong>Kiểu trả về:</strong> kiểu dữ liệu của giá trị hàm trả về. Nếu không trả về thì dùng <code>void</code>.</li>
+                        <li><strong>Tham số (parameter):</strong> các biến nhận giá trị truyền vào khi gọi hàm. Có thể không có tham số.</li>
+                        <li><strong>return:</strong> kết thúc hàm và trả về giá trị (nếu kiểu trả về không phải void).</li>
+                    </ul>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">FunctionDemo</span> {
+    <span class="cmt">// Hàm tính diện tích hình chữ nhật</span>
+    <span class="kw">static double</span> <span class="fn">dienTich</span>(<span class="kw">double</span> dai, <span class="kw">double</span> rong) {
+        <span class="kw">return</span> dai * rong;
+    }
+
+    <span class="cmt">// Hàm in thông báo (không trả về giá trị)</span>
+    <span class="kw">static void</span> <span class="fn">inThongBao</span>(<span class="cls">String</span> noi_dung) {
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"[THONG BAO] "</span> + noi_dung);
+    }
+
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">double</span> s = <span class="fn">dienTich</span>(<span class="num">5.0</span>, <span class="num">3.0</span>);
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Dien tich: "</span> + s); <span class="cmt">// 15.0</span>
+        <span class="fn">inThongBao</span>(<span class="str">"Chuong trinh ket thuc."</span>);
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Gọi hàm & Call Stack</h4>
+                    <p class="demo-desc">Nhấn nút để xem cách hàm được gọi và trả về</p>
+                    <div class="function-simulator">
+                        <div class="func-inputs">
+                            <label>dai = <input type="number" id="funcDai" value="5" step="0.5"></label>
+                            <label>rong = <input type="number" id="funcRong" value="3" step="0.5"></label>
+                            <button class="btn-primary" onclick="runFuncSim()">▶ Gọi dienTich(dai, rong)</button>
+                        </div>
+                        <div class="call-stack" id="callStack"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Câu 17 -->
+        <article class="question-card" id="q17">
+            <div class="question-header">
+                <span class="question-number">Câu 17</span>
+                <h3>Phân biệt tham số (parameter) và đối số (argument). Truyền giá trị (pass by value)?</h3>
+                <button class="mark-btn" onclick="toggleMark(17)">☑ Đánh dấu đã học</button>
+            </div>
+            <div class="question-body">
+                <div class="theory-section">
+                    <h4>📖 Lý thuyết</h4>
+                    <ul>
+                        <li><strong>Tham số (parameter):</strong> biến khai báo trong phần đầu của hàm, nhận giá trị khi hàm được gọi.</li>
+                        <li><strong>Đối số (argument):</strong> giá trị thực tế truyền cho hàm tại vị trí gọi hàm.</li>
+                    </ul>
+                    <p><strong>Java truyền tham số theo giá trị (pass by value):</strong> hàm nhận một bản sao của giá trị truyền vào. Mọi thay đổi trên tham số bên trong hàm KHÔNG ảnh hưởng đến biến gốc ở ngoài.</p>
+                    <p><strong>Lưu ý:</strong> với mảng và đối tượng, Java truyền bản sao của địa chỉ (reference), nên nội dung mảng CÓ THỂ bị thay đổi bên trong hàm (nhưng không thể thay đổi được reference bản thân).</p>
+                </div>
+                <div class="example-section">
+                    <h4>💡 Ví dụ minh họa</h4>
+                    <pre class="code-block"><span class="kw">public class</span> <span class="cls">PassByValue</span> {
+    <span class="kw">static void</span> <span class="fn">tangLenMot</span>(<span class="kw">int</span> x) {
+        x = x + <span class="num">1</span>; <span class="cmt">// chỉ thay đổi bản sao</span>
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Ben trong ham: x = "</span> + x);
+    }
+
+    <span class="kw">static void</span> <span class="fn">nhanDoi</span>(<span class="kw">int</span>[] arr) {
+        arr[<span class="num">0</span>] = arr[<span class="num">0</span>] * <span class="num">2</span>; <span class="cmt">// thay đổi nội dung mảng</span>
+    }
+
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="cls">String</span>[] args) {
+        <span class="kw">int</span> a = <span class="num">5</span>;
+        <span class="fn">tangLenMot</span>(a);
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Sau khi goi ham: a = "</span> + a); <span class="cmt">// vẫn là 5</span>
+
+        <span class="kw">int</span>[] nums = {<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>};
+        <span class="fn">nhanDoi</span>(nums);
+        <span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"nums[0] = "</span> + nums[<span class="num">0</span>]); <span class="cmt">// 20 (đã thay đổi)</span>
+    }
+}</pre>
+                </div>
+                <div class="interactive-section">
+                    <h4>🎮 Mô phỏng: Pass by Value vs Reference</h4>
+                    <p class="demo-desc">Xem trực quan sự khác biệt khi truyền primitive và mảng</p>
+                    <div class="passby-simulator">
+                        <div class="passby-panel">
+                            <h5>Primitive (int): Pass by Value</h5>
+                            <button class="btn-primary" onclick="runPassByValue()">▶ Chạy mô phỏng</button>
+                            <div class="memory-visual" id="passByValueMem"></div>
+                        </div>
+                        <div class="passby-panel">
+                            <h5>Array (int[]): Pass Reference Copy</h5>
+                            <button class="btn-primary" onclick="runPassByRef()">▶ Chạy mô phỏng</button>
+                            <div class="memory-visual" id="passByRefMem"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>☕ Ôn Thi Lý Thuyết Java - Chúc bạn thi tốt! 🎯</p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
